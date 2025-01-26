@@ -1,0 +1,48 @@
+{
+    "apiVersion": 2,
+    "name": "evergreen/card",
+    "version": "1.0.0",
+    "title": "Card",
+    "category": "design",
+    "icon": "card",
+    "description": "A customizable card component with image, title, and content.",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "align": ["wide", "full"]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "source": "html",
+            "selector": "h3"
+        },
+        "content": {
+            "type": "string",
+            "source": "html",
+            "selector": "p"
+        },
+        "imageUrl": {
+            "type": "string"
+        },
+        "imageId": {
+            "type": "number"
+        },
+        "imageAlt": {
+            "type": "string"
+        },
+        "linkUrl": {
+            "type": "string"
+        },
+        "backgroundColor": {
+            "type": "string"
+        },
+        "textColor": {
+            "type": "string"
+        }
+    },
+    "textdomain": "evergreen",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./editor.css",
+    "style": "file:./style.css"
+} 

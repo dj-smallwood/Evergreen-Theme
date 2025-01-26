@@ -1,0 +1,31 @@
+.wp-block-evergreen-card-grid {
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.02);
+    border-radius: 12px;
+    border: 1px dashed #ccc;
+}
+
+/* Fix grid layout in editor */
+.wp-block-evergreen-card-grid .block-editor-block-list__layout {
+    display: grid;
+    gap: inherit;
+    grid-template-columns: inherit;
+}
+
+/* Fix block appender position */
+.wp-block-evergreen-card-grid .block-list-appender {
+    position: relative;
+    grid-column: 1/-1;
+}
+
+@media (max-width: 1024px) {
+    .wp-block-evergreen-card-grid {
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .wp-block-evergreen-card-grid {
+        padding: 1rem;
+    }
+} 

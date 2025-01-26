@@ -11,4 +11,155 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: evergreen
-*/ 
+*/
+
+/* Container and Responsive Styles */
+.container {
+    width: 100%;
+    max-width: var(--wp--custom--container--xlarge);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    /* Improve mobile navigation */
+    .wp-block-navigation {
+        width: 100%;
+    }
+
+    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+        display: none;
+    }
+
+    .wp-block-navigation__responsive-container.is-menu-open {
+        padding: 1.5rem;
+    }
+
+    /* Improve mobile typography */
+    .wp-block-site-title {
+        font-size: 1.75rem !important;
+    }
+
+    .wp-block-site-tagline {
+        font-size: 1rem !important;
+    }
+
+    /* Improve mobile post layout */
+    .wp-block-post-title {
+        font-size: 1.5rem !important;
+    }
+
+    .wp-block-post-excerpt {
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Further adjustments for smaller screens */
+    .wp-block-site-title {
+        font-size: 1.5rem !important;
+    }
+
+    .wp-block-post-title {
+        font-size: 1.25rem !important;
+    }
+}
+
+/* Improve spacing and readability */
+.site-content {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.wp-block-post {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.wp-block-post:last-child {
+    border-bottom: none;
+}
+
+/* Improve navigation appearance */
+.wp-block-navigation {
+    margin-top: 1rem;
+}
+
+.wp-block-navigation-item {
+    padding: 0;
+}
+
+/* Improve footer spacing */
+.wp-block-group.is-layout-constrained > * {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+/* Button Styles */
+.wp-block-button__link,
+.wp-element-button {
+    border-radius: 4px !important;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.wp-block-button__link:hover,
+.wp-element-button:hover,
+.wp-block-navigation-item__label:hover,
+.wp-block-navigation-item__content:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.wp-block-button__link:active,
+.wp-element-button:active,
+.wp-block-navigation-item__label:active,
+.wp-block-navigation-item__content:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.is-style-outline > .wp-block-button__link,
+.wp-block-button__link.is-style-outline {
+    border: 2px solid var(--wp--preset--color--primary);
+    background-color: transparent;
+    color: var(--wp--preset--color--primary);
+}   
+
+.is-style-outline > .wp-block-button__link:hover,
+.wp-block-button__link.is-style-outline:hover {
+    background-color: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--background);
+}
+
+
+
+/* Mobile Navigation Adjustments */
+@media (max-width: 768px) {
+    .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
+        gap: 0 !important;
+    }
+
+    .wp-block-navigation__responsive-container.is-menu-open a {
+        padding: 0.75rem !important;
+    }
+
+    .wp-block-navigation__responsive-container.is-menu-open a::after {
+        bottom: 8px;
+    }
+} 

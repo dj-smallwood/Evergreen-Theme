@@ -64,6 +64,26 @@
                 "vw",
                 "%"
             ]
+        },
+        "custom": {
+            "container": {
+                "small": "100%",
+                "medium": "768px",
+                "large": "1024px",
+                "xlarge": "1320px"
+            },
+            "spacing": {
+                "container": {
+                    "mobile": "1rem",
+                    "tablet": "1.5rem",
+                    "desktop": "2rem"
+                }
+            },
+            "breakpoints": {
+                "mobile": "480px",
+                "tablet": "768px",
+                "desktop": "1024px"
+            }
         }
     },
     "styles": {
@@ -81,7 +101,71 @@
                 "color": {
                     "text": "var(--wp--preset--color--primary)"
                 }
+            },
+            "button": {
+                "border": {
+                    "radius": "4px"
+                },
+                "color": {
+                    "background": "var(--wp--preset--color--primary)",
+                    "text": "var(--wp--preset--color--background)"
+                },
+                "spacing": {
+                    "padding": {
+                        "top": "0.75rem",
+                        "bottom": "0.75rem",
+                        "left": "1.5rem",
+                        "right": "1.5rem"
+                    }
+                },
+                ":hover": {
+                    "color": {
+                        "background": "var(--wp--preset--color--secondary)",
+                        "text": "var(--wp--preset--color--background)"
+                    }
+                }
             }
+        },
+        "blocks": {
+            "core/group": {
+                "variations": {
+                    "container": {
+                        "spacing": {
+                            "padding": {
+                                "right": "var(--wp--custom--spacing--container--mobile)",
+                                "left": "var(--wp--custom--spacing--container--mobile)"
+                            }
+                        },
+                        "margin": {
+                            "left": "auto",
+                            "right": "auto"
+                        },
+                        "maxWidth": "var(--wp--custom--container--xlarge)"
+                    }
+                }
+            },
+            "core/navigation": {
+                "elements": {
+                    "link": {
+                        "spacing": {
+                            "padding": {
+                                "top": "0.5rem",
+                                "bottom": "0.5rem",
+                                "left": "0.75rem",
+                                "right": "0.75rem"
+                            }
+                        },
+                        ":hover": {
+                            "color": {
+                                "text": "var(--wp--preset--color--primary)"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "spacing": {
+            "blockGap": "1.5rem"
         }
     }
 } 

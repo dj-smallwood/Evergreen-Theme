@@ -1,0 +1,71 @@
+/* Editor-specific styles */
+.wp-block-evergreen-card {
+    margin: 1.5rem 0;
+}
+
+/* Match frontend styles in editor */
+.evergreen-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.evergreen-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.evergreen-card__media {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+}
+
+.evergreen-card__media img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.evergreen-card__content {
+    padding: 1.5rem;
+}
+
+.evergreen-card__content h3 {
+    margin: 0 0 1rem;
+    font-size: var(--wp--preset--font-size--large);
+    color: inherit;
+}
+
+.evergreen-card__content p {
+    margin: 0;
+    color: inherit;
+}
+
+/* Editor-specific button styles */
+.evergreen-card__media .components-button {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.05);
+    border: 2px dashed #ccc;
+    border-radius: 0;
+}
+
+.evergreen-card__media .components-button:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.evergreen-card__media img {
+    pointer-events: none;
+} 

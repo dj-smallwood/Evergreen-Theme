@@ -1,0 +1,24 @@
+.wp-block-evergreen-card-grid {
+    margin: 2rem 0;
+    padding: 2.5rem;
+}
+
+/* Add container background and rounded corners */
+.wp-block-evergreen-card-grid {
+    background-color: rgba(0, 0, 0, 0.02);
+    border-radius: 12px;
+}
+
+@media (max-width: 1024px) {
+    .wp-block-evergreen-card-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .wp-block-evergreen-card-grid {
+        grid-template-columns: 1fr !important;
+        padding: 1rem;
+    }
+} 
